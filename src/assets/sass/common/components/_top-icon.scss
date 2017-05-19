@@ -1,0 +1,6 @@
+@import "../../config/config";
+
+.#{$prefix}-icon-button {
+	text-align: right;
+	margin: 10 * $onePx 0;
+}

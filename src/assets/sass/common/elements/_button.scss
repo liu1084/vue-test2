@@ -1,0 +1,11 @@
+@import "../../config/_config";
+
+//global button
+.#{$prefix}-btn {
+	@include neu-btn();
+	margin-bottom: 15 * $onePx;
+}
+
+.#{$prefix}-btn-primary {
+	@include neu-btn-primary();
+}

@@ -1,0 +1,20 @@
+@import "../../config/config";
+
+$topOperationHeight: 50 * $onePx;
+$topOperationPaddingTop: 30 * $onePx;
+$topOperationMarginBottom: 12 * $onePx;
+
+.#{$prefix}-top-filters {
+	.filter {
+		display: inline-block;
+		margin-right: 15px;
+		label {
+			font-size: 12 * $onePx;
+		}
+		select, input {
+			width: 80 * $onePx;
+			height: 25 * $onePx;
+			margin-left: 10 * $onePx;
+		}
+	}
+}

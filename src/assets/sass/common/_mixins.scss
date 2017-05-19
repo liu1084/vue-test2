@@ -1,0 +1,131 @@
+@import "../config/config";
+@import "compass";
+
+@mixin button($backgroundColor: #ffffff, $height: 30 * $onePx, $width: 80 * $onePx){
+	width: $width;
+	height: $height;
+	border: solid 0.5px #dadee3;
+	opacity: 0.5;
+	text-align: center;
+	font-weight: bold;
+	font-size: 14 * $onePx;
+	@include border-radius(2 * $onePx);
+	cursor: pointer;
+	&.active {
+		background-color: #1663ba;
+		box-shadow: 0 0.5px 1.5px 0 rgba(45, 75, 126, 0.2);
+		color: #fff;
+	}
+}
+
+@mixin avatar($radius: 40 * $onePx, $backgroundColor: #fff) {
+	@include border-radius($radius);
+	height: $radius;
+	width: $radius;
+	background-color: $backgroundColor;
+	display: inline-block;
+	//background: #ffffff url($imageUrl) no-repeat center center transparent;
+}
+
+@mixin text-input($height: 32 * $onePx,
+					$width: 100%,
+					$radius: 2 * $onePx,
+					$backgroundColor: #fff,
+					$border: 1px solid #d9d9d9,
+					$focusColor: #2eaff1){
+	background: $backgroundColor;
+	border: $border;
+	outline: none;
+	@include border-radius($radius);
+	height: $height;
+	width: $width;
+	padding-left: 50 * $onePx;
+	&:focus, &:hover{
+		border: 1px solid $focusColor;
+	}
+}
+
+@mixin single-button ($backgroundColor: #2eaff1, $radius: 2 * $onePx){
+	background: $backgroundColor;
+	@include border-radius($radius);
+	color: #fff;
+	font-size: 14 * $onePx;
+	width: 100%;
+	height: 34 * $onePx;
+	&:focus, &:hover{
+		transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+	}
+}
+
+@mixin full-width {
+	width: 100%;
+}
+
+@mixin neu-btn {
+	display: inline-block;
+	padding: 6 * $onePx 12 * $onePx;
+	margin-bottom: 0;
+	font-size: 14 * $onePx;
+	font-weight: 400;
+	line-height: 1.42857143;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	-ms-touch-action: manipulation;
+	touch-action: manipulation;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	background-image: none;
+	border: 1 * $onePx solid transparent;
+	//border-radius: 3 * $onePx;
+}
+
+@mixin neu-btn-primary($color: #2eaff1) {
+	background-color: $color;
+	border-color: $color;
+	color: #FFFFFF;
+}
+
+
+@mixin centerPosition {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+@mixin device-operation-button($width: 24 * $onePx,
+	$height: 24 * $onePx,
+	$fontSize: 14 * $onePx,
+	$border: 1px solid #dee1e3,
+	$backgroundColor: #f5f6f6,
+	$color: #94999f,
+	$activeBackgroundColor: #1fb1ea,
+	$activeIconColor: #fff
+) {
+	width: $width;
+	height: $height;
+	display: inline-block;
+	@include border-radius(100%);
+	background-color: $backgroundColor;
+	border: $border;
+	color: $color;
+	position: relative;
+	.#{$prefix}-icon {
+		top: 4px;
+		position: absolute;
+		left: -1px;
+		font-size: $fontSize;
+	}
+
+	&.active {
+		background-color: $activeBackgroundColor;
+		border: 1px solid $activeBackgroundColor;
+		.#{$prefix}-icon {
+			color: $activeIconColor;
+		}
+	}
+}

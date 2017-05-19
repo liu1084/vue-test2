@@ -1,0 +1,31 @@
+@import "variables";
+@import "mixins";
+
+body {
+	font-family: $fontFamily;
+	font-size: $fontSize;
+}
+
+.full-width {
+	@include full-width();
+}
+
+.neu-left-section {
+	min-height: 800 * $onePx;
+}
+
+.#{$prefix}-icon {
+	cursor: pointer;
+	margin-left: 5px;
+	display: inline-block;
+	font-size: 12 * $onePx;
+	&:hover, &.active {
+		color: #1fb1ea;
+		cursor: pointer;
+	}
+}
+
+th {
+	font-weight: bold;
+}
+

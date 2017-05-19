@@ -1,0 +1,18 @@
+@import "../config/config";
+
+.#{$prefix}-right-section {
+
+	.#{$prefix}-top-operation {
+		.title {
+			@include span(100%);
+		}
+
+		.#{$prefix}-top-operation-buttons{
+			@include span(80%);
+		}
+
+		.#{$prefix}-parameter-group{
+			@include span(20%);
+		}
+	}
+}

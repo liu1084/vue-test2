@@ -1,0 +1,24 @@
+@import "../../config/_config";
+.panel {
+	font-size: 12 * $onePx;
+	.#{$prefix}-panel-header {
+		height: 46px;
+		margin-bottom: 0;
+	}
+
+	.#{$prefix}-panel-body{
+		.#{$prefix}-panel-body-content{
+			height: 34 *$onePx;
+			line-height: 34 *$onePx;
+			padding: 25 * $onePx 0;
+			.#{$prefix}-panel-body-title{
+				text-align: right;
+				padding-right: 15px;
+			}
+		}
+
+		&.adv {
+			display: none;
+		}
+	}
+}

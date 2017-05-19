@@ -1,0 +1,7 @@
+@mixin logoImage($imageName){
+	$backgroundImage: image_url('mobile-logos/' + $imageName);
+	background-image: $backgroundImage;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: center center;
+}
